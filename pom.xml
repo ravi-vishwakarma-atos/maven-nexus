@@ -19,30 +19,30 @@
       <finalName>${project.artifactId}-${project.version}</finalName>
       <plugins>
          <plugin>
-            <groupId>org.sonatype.plugins</groupId>
-            <artifactId>nexus-staging-maven-plugin</artifactId>
-            <version>1.5.1</version>
-            <executions>
-               <execution>
-                  <id>default-deploy</id>
-                  <phase>deploy</phase>
-                  <goals>
-                     <goal>deploy</goal>
-                  </goals>
-               </execution>
-            </executions>
-            <configuration>
-               <serverId>my-nexus</serverId>
-               <nexusUrl>http://10.128.0.15:8081/repository/maven-nexus/</nexusUrl>
-               <skipStaging>true</skipStaging>
-            </configuration>
-         </plugin>
+   <groupId>org.sonatype.plugins</groupId>
+   <artifactId>nexus-staging-maven-plugin</artifactId>
+   <version>1.5.1</version>
+   <executions>
+      <execution>
+         <id>default-deploy</id>
+         <phase>deploy</phase>
+         <goals>
+            <goal>deploy</goal>
+         </goals>
+      </execution>
+   </executions>
+   <configuration>
+      <serverId>my-nexus</serverId>
+      <nexusUrl>http://10.128.0.15:8081/nexus/</nexusUrl>
+      <skipStaging>true</skipStaging>
+   </configuration>
+</plugin>
       </plugins>
    </build>
    <distributionManagement>
-      <snapshotRepository>
-         <id>my-nexus</id>
-         <url>http://10.128.0.15:8081/repository/maven-nexus/</url>
-      </snapshotRepository>
-   </distributionManagement>
+   <snapshotRepository>
+      <id>my-nexus</id>
+      <url>http://10.128.0.15:8081/nexus/content/repositories/snapshots</url>
+   </snapshotRepository>
+</distributionManagement>
 </project>
