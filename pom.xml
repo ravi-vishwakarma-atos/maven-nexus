@@ -15,8 +15,9 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-		  <build>
+	<build>
 			<finalName>${project.artifactId}-${project.version}</finalName>
+			<plugins>
 			<plugin>
 		   <groupId>org.sonatype.plugins</groupId>
 		   <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -36,6 +37,7 @@
 			  <skipStaging>true</skipStaging>
 		   </configuration>
 		</plugin>
+		</plugins>
   </build>
   
   <distributionManagement>
