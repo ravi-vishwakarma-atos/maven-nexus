@@ -40,9 +40,9 @@
       </plugins>
    </build>
    <distributionManagement>
-   <snapshotRepository>
+   <repository>
       <id>my-nexus</id>
       <url>http://10.128.0.15:8081/nexus/content/repositories/snapshots</url>
-   </snapshotRepository>
+   </repository>
 </distributionManagement>
 </project>
