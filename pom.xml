@@ -1,53 +1,48 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.cloudifysource.examples</groupId>
-  <artifactId>java-hello-world-webapp</artifactId>
-  <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>java-hello-world-webapp Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-	<build>
-			<finalName>${project.artifactId}-${project.version}</finalName>
-			<plugins>
-			<plugin>
-		   <groupId>org.sonatype.plugins</groupId>
-		   <artifactId>nexus-staging-maven-plugin</artifactId>
-		   <version>1.5.1</version>
-		   <executions>
-			  <execution>
-				 <id>default-deploy</id>
-				 <phase>deploy</phase>
-				 <goals>
-					<goal>deploy</goal>
-				 </goals>
-			  </execution>
-		   </executions>
-		   <configuration>
-			  <serverId>my-nexus</serverId>
-			  <nexusUrl>http://10.128.0.15:8081/nexus/</nexusUrl>
-			  <skipStaging>true</skipStaging>
-		   </configuration>
-		</plugin>
-		</plugins>
-  </build>
-  
-  <distributionManagement>
-   <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://10.128.0.15:8081/repository/maven-nexus/</url>
-   </snapshotRepository>
-</distributionManagement>
-
-
-
-  
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>org.cloudifysource.examples</groupId>
+   <artifactId>java-hello-world-webapp</artifactId>
+   <packaging>war</packaging>
+   <version>1.0-SNAPSHOT</version>
+   <name>java-hello-world-webapp Maven Webapp</name>
+   <url>http://maven.apache.org</url>
+   <dependencies>
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>3.8.1</version>
+         <scope>test</scope>
+      </dependency>
+   </dependencies>
+   <build>
+      <finalName>${project.artifactId}-${project.version}</finalName>
+      <plugins>
+         <plugin>
+            <groupId>org.sonatype.plugins</groupId>
+            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <version>1.5.1</version>
+            <executions>
+               <execution>
+                  <id>default-deploy</id>
+                  <phase>deploy</phase>
+                  <goals>
+                     <goal>deploy</goal>
+                  </goals>
+               </execution>
+            </executions>
+            <configuration>
+               <serverId>my-nexus</serverId>
+               <nexusUrl>http://10.128.0.15:8081/repository/maven-nexus/</nexusUrl>
+               <skipStaging>true</skipStaging>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
+   <distributionManagement>
+      <snapshotRepository>
+         <id>nexus-snapshots</id>
+         <url>http://10.128.0.15:8081/repository/maven-nexus/</url>
+      </snapshotRepository>
+   </distributionManagement>
 </project>
