@@ -33,7 +33,7 @@
             </executions>
             <configuration>
                <serverId>my-nexus</serverId>
-               <nexusUrl>http://10.128.0.15:8081/repository/maven-repo/</nexusUrl>
+               <nexusUrl>http://10.128.0.15:8081/repository/maven-nexus/</nexusUrl>
                <skipStaging>true</skipStaging>
             </configuration>
          </plugin>
@@ -41,8 +41,8 @@
    </build>
    <distributionManagement>
       <snapshotRepository>
-         <id>nexus-snapshots</id>
-         <url>http://10.128.0.15:8081/repository/maven-repo/</url>
+         <id>my-nexus</id>
+         <url>http://10.128.0.15:8081/repository/maven-nexus/</url>
       </snapshotRepository>
    </distributionManagement>
 </project>
