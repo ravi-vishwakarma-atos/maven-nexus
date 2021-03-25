@@ -40,6 +40,10 @@
       </plugins>
    </build>
    <distributionManagement>
+      <repository>
+         <id>my-nexus</id>
+         <url>http://10.128.0.15:8081/repository/maven-nexus/</url>
+      </repository>
       <snapshotRepository>
          <id>my-nexus</id>
          <url>http://10.128.0.15:8081/repository/maven-nexus/</url>
