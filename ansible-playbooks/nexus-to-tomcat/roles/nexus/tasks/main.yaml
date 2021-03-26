@@ -8,11 +8,3 @@
       dest: ../files/
       extension: war
       version: "{{ artifact_version }}"
-- name: Deploy to Tomcat
-  hosts: tomcat-servers
-  tasks:
-        - name: Upload file to Tomcat machine
-          copy:
-               src: ../files/*.war
-               dest: /opt/apache-tomcat-7.0.61/webapps/
-  
