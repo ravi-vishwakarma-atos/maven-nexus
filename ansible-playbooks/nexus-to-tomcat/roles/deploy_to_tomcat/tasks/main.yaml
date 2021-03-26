@@ -4,6 +4,8 @@
        dest: /opt/apache-tomcat-7.0.61/webapps/
 
 - name: Restart Tomcat Service
+  remote_user: root
+  become: true
   service:
           name: tomcat
           state: restarted
