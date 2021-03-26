@@ -1,2 +1,1 @@
 target/
-ansible-playbooks/nexus-to-tomcat/roles/nexus/files/.ignored
