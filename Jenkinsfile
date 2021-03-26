@@ -5,7 +5,11 @@ pipeline{
 		
 		CURRENT_VERSION="1.0.${BUILD_NUMBER}"
 	}
-	
+	stages("Clean workspace"){
+		steps{
+			sh "rm -rf ${WORKSPACE}"
+		}
+	}
 	stages{
 	
 		stage ("Checkout from GitHub") {
