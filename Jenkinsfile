@@ -35,7 +35,7 @@ pipeline{
 		stage("Deploy to Tomcat"){
 			steps{
 				sh "echo 'artifact_version: ${CURRENT_VERSION}' > ${WORKSPACE}/ansible-playbooks/nexus-to-tomcat/group_vars/all"
-				sh "ansible-playbook ${WORKSPACE}/ansible-playbooks/nexus-to-tomcat/nexus-to-tomcat.yaml"
+				sh "ansible-playbook ${WORKSPACE}/ansible-playbooks/nexus-to-tomcat/deploy-to-tomcat.yaml"
 			
 			}		
 		}
