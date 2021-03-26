@@ -31,5 +31,12 @@ pipeline{
 				sh "mvn deploy -Dmaven.test.skip=true"
 			}
 		}
+		
+		stage("Deploy to Tomcat"){
+			steps{
+				sh "echo 'artifact_version: ${CURRENT_VERSION}' > ${WORKSPACE}/ansible-playbooks/nexus-to-tomcat/group_vars/all"
+			
+			}		
+		}
 	}
 }

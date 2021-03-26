@@ -5,6 +5,6 @@
       repository_url: 'http://10.128.0.15:8081/repository/maven-nexus/'
       username: jenkins
       password: Jenkins@123
-      dest: /tmp/ 
+      dest: . 
       extension: war
       version: "{{ artifact_version }}"
