@@ -35,7 +35,7 @@ pipeline{
 			steps{
 				sh "echo 'artifact_version: ${CURRENT_VERSION}' > ${WORKSPACE}/ansible-playbooks/nexus-to-tomcat/group_vars/all"
 				sh "ansible-playbook ${WORKSPACE}/ansible-playbooks/nexus-to-tomcat/download-from-nexus.yaml"
-				sh "cp ${WORKSPACE}/ansible-playbooks/nexus-to-tomcat/java-hello-world-webapp-${CURRENT_VERSION}.war ${WORKSPACE}/ansible-playbooks/nexus-to-tomcat/roles/deploy-to-tomcat/files/"
+				sh "cp ${WORKSPACE}/ansible-playbooks/nexus-to-tomcat/java-hello-world-webapp-${CURRENT_VERSION}.war ${WORKSPACE}/ansible-playbooks/nexus-to-tomcat/roles/deploy_to_tomcat/files/"
 				sh "ansible-playbook ${WORKSPACE}/ansible-playbooks/nexus-to-tomcat/deploy-to-tomcat.yaml"
 			}		
 		}
