@@ -1,4 +1,4 @@
 - name: Deploy to Tomcat
   copy:
-       src: ../files/*.war
+       src: "../files/java-hello-world-webapp-{{ artifact_version }}.war"
        dest: /opt/apache-tomcat-7.0.61/webapps/
