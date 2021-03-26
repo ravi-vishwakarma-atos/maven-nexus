@@ -1,0 +1,10 @@
+- name: Download an artifact from a private repository requiring authentication
+    maven_artifact:
+        group_id: org.cloudifysource.examples
+        artifact_id: java-hello-world-webapp
+        repository_url: 'http://10.128.0.15:8081/repository/maven-nexus/'
+        username: jenkins
+        password: Jenkins@123
+        dest: . 
+        extension: war
+        version: "{{ artifact_version }}"
