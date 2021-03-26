@@ -20,7 +20,7 @@ pipeline{
 			}
 		}
 		
-		stage("Clean workspace"){
+		stage("Maven clean"){
 			steps{
 				sh "mvn clean"
 			}
